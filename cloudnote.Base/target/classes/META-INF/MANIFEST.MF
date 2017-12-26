@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Built-By: Administrator
+Class-Path: ASN-0.0.1-SNAPSHOT.jar org.slf4j.api-1.7.2.jar slf4j-api-1
+ .7.2.jar spring-webmvc-3.2.8.RELEASE.jar spring-beans-3.2.8.RELEASE.j
+ ar spring-context-3.2.8.RELEASE.jar spring-aop-3.2.8.RELEASE.jar aopa
+ lliance-1.0.jar spring-core-3.2.8.RELEASE.jar commons-logging-1.1.3.j
+ ar spring-expression-3.2.8.RELEASE.jar spring-web-3.2.8.RELEASE.jar j
+ ackson-annotations-2.2.3.jar jackson-core-2.2.3.jar jackson-databind-
+ 2.2.3.jar jaxws-api-2.2.11.jar jaxb-api-2.2.9.jar javax.xml.soap-api-
+ 1.3.5.jar jsr181-api-1.0-MR1.jar javax.annotation-api-1.2.jar javax.i
+ nject-1.jar persistence-api-1.0.2.jar commons-codec-1.10.jar org.apac
+ he.commons.codec-1.8.jar mybatis-3.2.8.jar mybatis-spring-1.2.2.jar c
+ ommons-dbcp-1.4.jar commons-pool-1.5.4.jar spring-jdbc-3.2.8.RELEASE.
+ jar spring-tx-3.2.8.RELEASE.jar mysql-connector-java-5.1.37.jar junit
+ -4.12.jar hamcrest-core-1.3.jar JsonFormat-0.0.1-SNAPSHOT.jar json-li
+ b-2.4-jdk15.jar commons-beanutils-1.8.0.jar commons-collections-3.2.1
+ .jar commons-lang-2.5.jar ezmorph-1.0.6.jar
+Build-Jdk: 1.8.0_71
+Created-By: Maven Integration for Eclipse
+

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"      
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.leeshtao.springmybatis.dao.PersonSetDao">
+
+	<resultMap id="personResultMap" type="Person">
+		<id column="ID" javaType="Integer" property="id"/>
+		<result column="PERSON_NAME" 	jdbcType="VARCHAR" 		property="personName"/>
+		<result column="AGE" 			jdbcType="DECIMAL" 		property="age"/>
+		<result column="SEX" 			jdbcType="DECIMAL" 		property="sex"/>
+	</resultMap>
+	
+ 	<update id="updatePerson" parameterType="Person">
+ 		update person
+ 			<set>
+ 				<if test="personName != null and personName !=''">
+ 					person_name=#{personName}
+ 				</if>
+ 			</set>
+ 		where id=#{id};
+ 	</update>
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

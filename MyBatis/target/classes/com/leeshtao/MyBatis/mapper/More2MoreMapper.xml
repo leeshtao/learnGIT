@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"      
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <!-- 此处的namespace一般对应的是daoService所在的包,但在此demo中未使用 -->
+<mapper namespace="com.leeshtao.MyBatis.mapper.More2MoreMapper">
+
+	<resultMap id="teacherResultMap" type="Teacher">
+		<id column="ID" javaType="Integer" property="id"/>
+		<result column="TEACHER_NAME" 	jdbcType="VARCHAR" 		property="teacherName"/>
+	</resultMap>
+	
+	<resultMap id="classInfoResultMap" type="ClassInfo">
+		<id column="ID" javaType="Integer" property="id"/>
+		<result column="CLASS_NAME" 	jdbcType="VARCHAR" 		property="className"/>
+		<collection property="teachers" column="id"
+			select="getTeacherByClassId"/>
+	</resultMap>
+	
+	<parameterMap id="parameterRelationMap" type="TeacherClassRelation">
+		<parameter property="teacherId"/>
+		<parameter property="classInfoId"/>
+	</parameterMap>
+	
+	<insert id="saveTeacher" parameterType="Teacher">
+		insert into teacher(id,teacher_name) values(#{id},#{teacherName});
+	</insert>
+	
+	<insert id="saveClassInfo" parameterType="ClassInfo">
+		insert into class_info(id,class_name) values(#{id},#{className});
+	</insert>
+	<select id="getClassInfo" parameterType="int" resultMap="classInfoResultMap">
+		select * from class_info where id=#{id};
+	</select>
+	
+	<insert id="saveRelation" parameterMap="parameterRelationMap">
+		insert into teacher_class values(#{teacherId},#{classInfoId});
+	</insert>
+	
+	<select id="getTeacherByClassId" parameterType="int" resultMap="teacherResultMap">
+		select t.*,tc.class_info_id
+			from teacher t,teacher_class tc
+			where t.id=tc.teacher_id and tc.class_info_id=#{id};
+	</select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

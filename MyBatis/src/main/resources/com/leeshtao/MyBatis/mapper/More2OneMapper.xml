@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"      
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <!-- 此处的namespace一般对应的是daoService所在的包,但在此demo中未使用 -->
+<mapper namespace="com.leeshtao.MyBatis.mapper.More2OneMapper">
+
+	<resultMap id="mobileResultMap" type="Mobile">
+		<id column="ID" javaType="Integer" property="id"></id>
+		<result column="MOBILE_NAME" 	jdbcType="VARCHAR" 		property="mobileName"/>
+		<!-- 多对一的关系 -->  
+        <!-- property: 指的是属性的值, javaType：指的是属性的类型--> 
+		<association property="student" javaType="Student">
+			<id column="ID" javaType="Integer" property="id"/>
+			<result column="STUDENT_NAME" jdbcType="VARCHAR" 	property="studentName"/>
+		</association>
+	</resultMap>
+	
+	
+ 	<select id="getMobile" parameterType="int" resultMap="mobileResultMap">
+ 		select m.mobile_name,s.student_name
+ 			from mobile m,student s
+ 			where m.student_id=s.id
+ 			 and m.id=#{id};
+ 	</select>
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

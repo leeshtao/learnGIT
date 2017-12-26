@@ -1,0 +1,37 @@
+2017-11-29  09:42:32.267 [main] INFO  com.leeshtao.cloudnote.user.service.UserServiceImpl - 登录时间:2017-11-29 09:42:32,用户:list,用户ID:100000000012
+2017-11-29  16:54:05.360 INFO  c.l.c.s.h.ShareServiceImpl 
+	 
+==================解码后:Share==================
+{
+	"cnNoteId":7,
+	"cnShareBody":"",
+	"cnShareTitle":"Maven部署测试",
+	"createBy":0,
+	"createDate":"",
+	"description":"",
+	"id":0,
+	"isValid":0,
+	"lastUpdateBy":0,
+	"lastUpdateDate":"",
+	"status":0
+}
+==================解码后:Share==================
+
+2017-11-29  16:57:24.182 INFO  c.l.c.s.h.ShareServiceImpl 
+	 
+==================解码后:Share==================
+{
+	"cnNoteId":7,
+	"cnShareBody":"",
+	"cnShareTitle":"Maven部署测试",
+	"createBy":0,
+	"createDate":"2017-11-29 16:57:24",
+	"description":"",
+	"id":12,
+	"isValid":1,
+	"lastUpdateBy":0,
+	"lastUpdateDate":"",
+	"status":0
+}
+==================解码后:Share==================
+
