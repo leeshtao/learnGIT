@@ -1,0 +1,36 @@
+2017-11-29  09:39:54.627 [main] ERROR test.TestNoteDao - 没有找到笔记
+2017-11-29  09:42:17.220 [main] ERROR com.leeshtao.cloudnote.user.service.UserServiceImpl - 用户名错误
+2017-11-29  09:56:15.023 [main] ERROR test.TestNoteService - 没有找到相关笔记
+2017-11-29  10:31:35.376 [main] ERROR com.leeshtao.cloudnote.note.service.NoteServiceImpl - 用户不存在
+2017-11-29  10:35:11.685 [main] ERROR com.leeshtao.cloudnote.note.service.NoteServiceImpl - ID不存在
+2017-11-29  10:35:40.365 [main] ERROR com.leeshtao.cloudnote.note.service.NoteServiceImpl - ID不存在
+2017-11-29  10:39:14.428 [main] ERROR com.leeshtao.cloudnote.note.service.NoteServiceImpl - ID不存在
+2017-11-29  11:01:53.743 [main] ERROR com.leeshtao.cloudnote.book.service.BookServiceImpl - 用户不存在
+2017-11-29  11:18:40.774 [main] ERROR com.leeshtao.cloudnote.book.service.BookServiceImpl - 笔记本名不能重复
+2017-11-29  11:31:10.421 ERROR com.leeshtao.cloudnote.book.service.BookServiceImpl - 笔记本名不能重复
+2017-11-29  11:32:52.785 ERROR c.l.c.b.s.BookServiceImpl - 笔记本名不能重复
+2017-11-29  11:33:22.155 ERROR c.l.c.b.s.BookServiceImpl - 笔记本名不能重复
+2017-11-29  11:33:35.750 ERROR com.leeshtao.cloudnote.book.service.BookServiceImpl - 笔记本名不能重复
+2017-11-29  11:33:47.011 ERROR c.l.c.b.s.BookServiceImpl - 笔记本名不能重复
+2017-11-29  11:34:37.313 ERROR c.l.c.b.s.BookServiceImpl -
+ 笔记本名不能重复
+2017-11-29  11:36:01.223 ERROR c.l.c.b.s.BookServiceImpl -
+	 笔记本名不能重复
+2017-11-29  11:36:26.631 ERROR c.l.c.b.s.BookServiceImpl 
+	 笔记本名不能重复
+2017-11-29  14:14:40.841 ERROR c.l.c.b.h.BookServiceImpl 
+	 笔记本名不能重复
+2017-11-29  14:15:14.269 ERROR c.l.c.u.h.UserServiceImpl 
+	 用户名错误
+2017-11-29  14:47:21.717 ERROR c.l.c.u.h.UserServiceImpl 
+	 用户名错误
+2017-11-29  14:48:38.204 ERROR c.l.c.b.h.BookServiceImpl 
+	 笔记本名不能重复
+2017-11-29  14:56:32.607 ERROR c.l.c.s.h.ShareServiceImpl 
+	 找不到相关分享内容
+2017-11-29  14:56:59.897 ERROR c.l.c.s.h.ShareServiceImpl 
+	 找不到相关分享内容
+2017-11-29  16:53:20.994 ERROR c.l.c.s.h.ShareServiceImpl 
+	 分享的笔记不存在
+2017-11-29  17:04:38.250 ERROR c.l.c.s.h.ShareServiceImpl 
+	 不能重复分享同一笔记
