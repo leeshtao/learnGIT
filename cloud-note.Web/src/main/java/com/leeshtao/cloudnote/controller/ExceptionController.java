@@ -7,7 +7,7 @@ import com.leeshtao.cloudnote.util.JsonResult;
 
 
 /**
- * 集中处理异常
+ * 闆嗕腑澶勭悊寮傚父
  *
  */
 public abstract class ExceptionController {

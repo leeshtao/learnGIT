@@ -22,7 +22,7 @@ public class UserController extends ExceptionController{
 	@Resource
 	private UserService userService;
 	@ResponseBody
-	@RequestMapping("/login.do")//´Ë´¦¶ÔÓ¦µÄÊÇlog_in.htmlÖĞ·¢ËÍAjaxÇëÇóÖĞµÄurlÖĞ¶¨ÒåµÄ
+	@RequestMapping("/login.do")//æ­¤å¤„å¯¹åº”çš„æ˜¯log_in.htmlä¸­å‘é€Ajaxè¯·æ±‚ä¸­çš„urlä¸­å®šä¹‰çš„
 	public Object login(String name,String password){
 			User user = userService.login(name, password);
 			return new JsonResult(user);
@@ -36,7 +36,7 @@ public class UserController extends ExceptionController{
 	}
 	
 	@ExceptionHandler(NameException.class)
-	//¼¯ÖĞ´¦ÀíNameException.classÀàĞÍµÄÒì³£
+	//é›†ä¸­å¤„ç†NameException.classç±»å‹çš„å¼‚å¸¸
 	@ResponseBody
 	public JsonResult nameExp(NameException e) {
 		e.printStackTrace();
@@ -44,7 +44,7 @@ public class UserController extends ExceptionController{
 	}
 	
 	@ExceptionHandler(PasswordException.class)
-	//¼¯ÖĞ´¦ÀíPasswordException.classÀàĞÍµÄÒì³£
+	//é›†ä¸­å¤„ç†NameException.classç±»å‹çš„å¼‚å¸¸
 	@ResponseBody
 	public JsonResult pwdExp(PasswordException e) {
 		e.printStackTrace();
