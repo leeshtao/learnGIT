@@ -7,8 +7,9 @@
   <packaging>pom</packaging>
   <modules>
     <module>cloudnote.parent</module>
-    <module>cloudnote.Base</module>
+    
     <module>cloudnote.Service</module>
     <module>cloudnote.Web</module>
+    <module>cloudnote.Base</module>
   </modules>
 </project>

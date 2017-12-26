@@ -1,4 +1,6 @@
-2017-12-05  17:16:38.217 ERROR t.TestNoteDao 
-	 笔记不存在
-2017-12-05  17:16:38.620 ERROR t.TestNoteDao 
-	 没有找到笔记
+2017-12-26  21:44:54.810 ERROR c.l.c.u.h.UserServiceImpl 
+	 用户名错误
+2017-12-26  21:52:05.819 ERROR c.l.c.u.h.UserServiceImpl 
+	 密码错误,用户ID:100000000004
+2017-12-26  22:16:39.039 ERROR c.l.c.u.h.UserServiceImpl 
+	 用户名错误
