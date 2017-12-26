@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration >
+    <timestamp key="byDay" datePattern="yyyyMMdd"/>
+    
+    <!-- 应用名称 -->
+    <property name="APP_NAME" value="logtest" />
+    <!--日志文件的保存路径,首先查找系统属性-Dlog.dir,如果存在就使用其；否则，在当前目录下创建名为logs目录做日志存放的目录 -->
+    <property name="LOG_HOME" value="${log.dir:-logs}/${APP_NAME}" />
+    <!-- 日志输出格式 -->
+    <property name="ENCODER_PATTERN"
+              value="%d{yyyy-MM-dd  HH:mm:ss.SSS} [%thread] %-5level %logger{80} - %msg%n" />
+    <contextName>${APP_NAME}</contextName>
+    
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    	<encoder>
+    		<pattern>${ENCODER_PATTERN}</pattern>
+    		<charset class="java.nio.charset.Charset">UTF-8</charset>
+    	</encoder>
+    </appender>
+    
+    <appender name="FILEINFO" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    	<file>${LOG_HOME}/biz/logback-info.log</file>
+    	<filter class="ch.qos.logback.classic.filter.LevelFilter">
+    		<level>INFO</level>
+    		<onMatch>ACCEPT</onMatch>
+    		<onMismatch>DENY</onMismatch>
+    	</filter>
+    	<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+    		<!-- rollover daily -->
+    		<fileNamePattern>logs-archive/biz/logback-info-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+    		<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+    			<maxFileSize>10MB</maxFileSize>
+    		</timeBasedFileNamingAndTriggeringPolicy>
+    	</rollingPolicy>
+    	<encoder>
+    		<pattern>${ENCODER_PATTERN}</pattern>
+    		<charset class="java.nio.charset.Charset">UTF-8</charset>
+    	</encoder>
+    </appender>
+    
+    <appender name="FILEERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    	<file>${LOG_HOME}/exception/logback-exception.log</file>
+    	<filter class="ch.qos.logback.classic.filter.LevelFilter">
+    		<level>ERROR</level>
+    		<onMatch>ACCEPT</onMatch>
+    		<onMismatch>DENY</onMismatch>
+    	</filter>
+    	<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+    		<!-- rollover daily -->
+    		<fileNamePattern>logs-archive/exception/logback-exception-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+    		<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+    			<maxFileSize>10MB</maxFileSize>
+    		</timeBasedFileNamingAndTriggeringPolicy>
+    	</rollingPolicy>
+    	<encoder>
+    		<pattern>${ENCODER_PATTERN}</pattern>
+    		<charset class="java.nio.charset.Charset">UTF-8</charset>
+    	</encoder>
+    </appender>
+    
+        <appender name="TASK_FILEINFO" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    	<file>${LOG_HOME}/info/job-info.log</file>
+    	<filter class="ch.qos.logback.classic.filter.LevelFilter">
+    		<level>INFO</level>
+    		<onMatch>ACCEPT</onMatch>
+    		<onMismatch>DENY</onMismatch>
+    	</filter>
+    	<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+    		<!-- rollover daily -->
+    		<fileNamePattern>logs-archive/info/job-info-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+    		<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+    			<maxFileSize>10MB</maxFileSize>
+    		</timeBasedFileNamingAndTriggeringPolicy>
+    	</rollingPolicy>
+    	<encoder>
+    		<pattern>${ENCODER_PATTERN}</pattern>
+    		<charset class="java.nio.charset.Charset">UTF-8</charset>
+    	</encoder>
+    </appender>
+    
+        <appender name="TASK_FILEERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    	<file>${LOG_HOME}/info/job-exception.log</file>
+    	<filter class="ch.qos.logback.classic.filter.LevelFilter">
+    		<level>ERROR</level>
+    		<onMatch>ACCEPT</onMatch>
+    		<onMismatch>DENY</onMismatch>
+    	</filter>
+    	<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+    		<!-- rollover daily -->
+    		<fileNamePattern>logs-archive/info/job-exception-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+    		<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+    			<maxFileSize>10MB</maxFileSize>
+    		</timeBasedFileNamingAndTriggeringPolicy>
+    	</rollingPolicy>
+    	<encoder>
+    		<pattern>${ENCODER_PATTERN}</pattern>
+    		<charset class="java.nio.charset.Charset">UTF-8</charset>
+    	</encoder>
+    </appender>
+    
+    <logger name="com.leeshtao.cloudnote" level="" >
+    	<appender-ref ref="STDOUT" />
+    	<appender-ref ref="FILEINFO" />
+    	<appender-ref ref="FILEERROR" />
+    	<appender-ref ref="TASK_FILEINFO" />
+    	<appender-ref ref="TASK_FILEERROR" />
+    </logger>
+    	
+    
+    <root level="DEBUG">
+    </root>
+    
+    <logger name="org.hibernate" level="WARN"/>
+</configuration>
+
+
