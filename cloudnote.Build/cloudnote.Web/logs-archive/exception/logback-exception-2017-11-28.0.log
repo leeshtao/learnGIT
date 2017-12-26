@@ -1,9 +1,0 @@
-2017-11-28  16:39:27.029 [main] ERROR com.leeshtao.cloudnote.user.service.UserServiceImpl - 用户名错误
-2017-11-28  17:04:13.816 [main] ERROR com.leeshtao.cloudnote.user.service.UserServiceImpl - 用户名错误
-2017-11-28  17:08:35.238 [main] ERROR com.leeshtao.cloudnote.user.service.UserServiceImpl - 用户名错误
-2017-11-28  17:10:04.768 [main] ERROR com.leeshtao.cloudnote.user.service.UserServiceImpl - 用户名错误
-2017-11-28  17:21:14.190 [main] ERROR com.leeshtao.cloudnote.user.service.UserServiceImpl - 用户名错误
-2017-11-28  20:22:21.507 [main] ERROR com.leeshtao.cloudnote.user.service.UserServiceImpl - 用户名错误
-2017-11-28  21:43:28.927 [main] ERROR test.TestNoteDao - 笔记不存在
-2017-11-28  21:45:43.083 [main] ERROR test.TestNoteDao - 笔记不存在
-2017-11-28  22:09:37.587 [main] ERROR test.TestNoteDao - 没有找到笔记
